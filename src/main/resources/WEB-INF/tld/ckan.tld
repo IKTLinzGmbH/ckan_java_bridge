@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>ckan</shortname>
+	<info>Taglib for accessing a CKAN service data</info>
+	<uri>http://data.linz.gv.at/taglib/ckan</uri>
+	
+	<tag>
+		<name>retrieve</name>
+		<tagclass>at.ikt.ckan.taglibs.RetrievePackageMetaTag</tagclass>
+		<info>For retrieving PackageMeta information</info>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>ckanUri</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>baseUri</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>category</name>
+		<tagclass>at.ikt.ckan.taglibs.SearchCategoryMetaTag</tagclass>
+		<info>For retrieving Packages in category</info>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>cmsCategory</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>baseUri</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>search</name>
+		<tagclass>at.ikt.ckan.taglibs.SearchMetaTag</tagclass>
+		<info>For searching Packages by a query string</info>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>queryString</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>baseUri</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>package</name>
+		<tagclass>at.ikt.ckan.taglibs.PackageMetaTag</tagclass>
+		<info>For retrieving single Packages</info>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>packageName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>baseUri</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>	
+</taglib>
