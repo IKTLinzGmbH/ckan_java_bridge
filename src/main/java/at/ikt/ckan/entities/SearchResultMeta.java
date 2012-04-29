@@ -7,7 +7,7 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 /**
  * Entity object that holds information for a CKAN package resource.
  * 
- * Normally accessed vie REST using '.../api/rest/package/{name}'
+ * Normally accessed vie REST using '.../api/search/package?q={query}'
  * 
  * A Json Wrapper
  * 

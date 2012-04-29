@@ -7,7 +7,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 
 
 /**
- * Holds information about one resource of {@link PackageMeta}
+ * Holds information about one resource associated to {@link PackageMeta}
  * 
  *  A Json/Jackson Wrapper.
  * 
@@ -93,8 +93,6 @@ public class PackageMetaResource {
 		this.position = position;
 	}
 	
-	
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;

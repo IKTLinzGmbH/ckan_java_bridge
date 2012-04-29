@@ -38,8 +38,6 @@ public class PackageMeta {
 	private String notesRendered;
 	private String notes;
 
-	private String cmsCategory;
-
 	private String url;
 	private String ckanUrl;
 	private String downloadUrl;
@@ -227,38 +225,49 @@ public class PackageMeta {
 		this.resources = resources;
 	}
 
+	/**
+	 * @return a List of all tags assigned to this package
+	 */
 	public List<String> getTags() {
 		return tags;
 	}
 
+	/**
+	 * @param tags
+	 *            a List of all tags assigned to this package
+	 */
 	public void setTags(List<String> tags) {
 		this.tags = tags;
 	}
 
+	/**
+	 * @return a List of all groups assigned to this package
+	 */
 	public List<String> getGroups() {
 		return groups;
 	}
 
+	/**
+	 * @param a
+	 *            List of all groups assigned to this package
+	 */
 	public void setGroups(List<String> groups) {
 		this.groups = groups;
 	}
 
+	/**
+	 * @return a Map<key, value> holding extra attributes
+	 */
 	public Map<String, String> getExtras() {
 		return extras;
 	}
 
+	/**
+	 * @param extras
+	 *            a Map<key, value> holding extra attributes
+	 */
 	public void setExtras(Map<String, String> extras) {
 		this.extras = extras;
-	}
-
-	@JsonProperty("cms_category")
-	public String getCmsCategory() {
-		return cmsCategory;
-	}
-
-	@JsonProperty("cms_category")
-	public void setCmsCategory(String cmsCategory) {
-		this.cmsCategory = cmsCategory;
 	}
 
 	@Override
@@ -269,9 +278,8 @@ public class PackageMeta {
 				+ authorEmail + ", state=" + state + ", version=" + version
 				+ ", license=" + license + ", licenseId=" + licenseId
 				+ ", notesRendered=" + notesRendered + ", notes=" + notes
-				+ ", cmsCategory=" + cmsCategory + ", url=" + url
-				+ ", ckanUrl=" + ckanUrl + ", downloadUrl=" + downloadUrl
-				+ ", metadataCreated=" + metadataCreated
+				+ ", url=" + url + ", ckanUrl=" + ckanUrl + ", downloadUrl="
+				+ downloadUrl + ", metadataCreated=" + metadataCreated
 				+ ", metadataModified=" + metadataModified + ", resources="
 				+ resources + ", tags=" + tags + ", groups=" + groups
 				+ ", extras=" + extras + "]";
