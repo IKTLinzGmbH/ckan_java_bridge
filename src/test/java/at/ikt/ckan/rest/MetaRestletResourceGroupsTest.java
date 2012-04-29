@@ -3,8 +3,8 @@ package at.ikt.ckan.rest;
 import org.junit.Before;
 import org.junit.Test;
 
-import util.ListAssert;
 import at.ikt.ckan.entities.PackageMeta;
+import at.ikt.ckan.util.ListAssert;
 
 public class MetaRestletResourceGroupsTest {
 

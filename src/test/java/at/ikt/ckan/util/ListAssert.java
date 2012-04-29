@@ -1,4 +1,4 @@
-package util;
+package at.ikt.ckan.util;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -8,9 +8,9 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import util.DateAssert;
 
 import at.ikt.ckan.entities.PackageMeta;
+import at.ikt.ckan.util.DateAssert;
 
 public class PackageMetaRestletResourceDateTimeTest {
 

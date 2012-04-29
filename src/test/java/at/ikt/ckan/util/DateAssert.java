@@ -1,4 +1,4 @@
-package util;
+package at.ikt.ckan.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
