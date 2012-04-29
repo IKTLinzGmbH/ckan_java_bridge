@@ -33,7 +33,7 @@ public class PackageMetaRestletResourceSophisticatedTest {
 		assertEquals("active", packageMeta.getState());
 
 		assertEquals(
-				"Hauptwohnsitzbevölkerung - Geschlecht und Familienstand ",
+				"HauptwohnsitzbevÃ¶lkerung - Geschlecht und Familienstand ",
 				packageMeta.getTitle());
 
 		assertEquals("Open Commons Region Linz", packageMeta.getMaintainer());
@@ -46,7 +46,7 @@ public class PackageMetaRestletResourceSophisticatedTest {
 		assertEquals(
 				"<p>Tabelle mit Altersgruppen.\n"
 						+ "</p>\n"
-						+ "<p>1) zum Familienstand \"ledig\" wurden auch Personen mit unbekanntem Familienstand gezählt\n"
+						+ "<p>1) zum Familienstand \"ledig\" wurden auch Personen mit unbekanntem Familienstand gezÃ¤hlt\n"
 						+ "   2) derzeit keine \"hinterbliebene eingetragene PartnerInnen\".\n"
 						+ "</p>", packageMeta.getNotesRendered());
 
