@@ -146,8 +146,7 @@ public class PackageMetaResource {
 
 	public static class ByPositionComparator implements
 			Comparator<PackageMetaResource> {
-
-		@Override
+		
 		public int compare(PackageMetaResource pmr1, PackageMetaResource pmr2) {
 			return pmr1.getPosition() != null ? pmr1.getPosition().compareTo(
 					pmr2.getPosition()) : -1;
