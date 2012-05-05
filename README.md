@@ -7,15 +7,32 @@ This code has its origin in the [Open Data - Linz](http://data.linz.gv.at/) proj
 It is a _Java interface_ using [Restlet](http://www.restlet.org/) to access the [CKAN](http://ckan.org/) api.  
 Information about the _CKAN_ API can be found [here](http://docs.ckan.org/en/latest/api-tutorial.html).
 
-It enables you to retrieve _package_ and associated _resource_ information from any _CKAN_ instance.
+* It enables you to retrieve _package_ and associated _resource_ information from any _CKAN_ instance.
+* _JSP taglibs_  to render that information
+
+
+## Usage 
+
+### Retrieving package information
+
+``` java
+
+String packageName = "package_name";
+String uri = UriHelper.concatUris(baseUri, PackageMetaRestletResource.PACKAGE_URI + packageName);
+
+RestletResourceFactory factory = new RestletResourceFactory();
+		PackageMetaRestletResource restletResource = factory
+				.createPackageMetaResource(uri);
+
+		PackageMeta result = restletResource.get();
+```
+
 
 ## Credits
 
-This code has its origin in the [Open Data - Linz](http://data.linz.gv.at/) project. 
-
 * [Open Data - Linz](http://data.linz.gv.at/)
 * with some help of [solvistas GmbH](www.solvistas.at)
-* Thanks to [Open Knowledge Foundation](http://okfn.org/) for developing [CKAN](http://ckan.org/) 
+* thanks to [Open Knowledge Foundation](http://okfn.org/) for developing [CKAN](http://ckan.org/) 
 
 
 
