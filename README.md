@@ -15,8 +15,7 @@ Information about the _CKAN_ API can be found [here](http://docs.ckan.org/en/lat
 
 ### Retrieving package information
 
-
-    String packageName = "package_name";
+    String packageName = ...;
     String uri = UriHelper.concatUris(baseUri, PackageMetaRestletResource.PACKAGE_URI + packageName);
 
     RestletResourceFactory factory = new RestletResourceFactory();   
@@ -27,6 +26,7 @@ Information about the _CKAN_ API can be found [here](http://docs.ckan.org/en/lat
 
 ### Searching for packages
 
+    String queryString = ...;
     String searchUri = SearchResultMetaRestletResource.SEARCH_URI + queryString;
 
     SearchResultMetaRestletResource restletResource = factory
