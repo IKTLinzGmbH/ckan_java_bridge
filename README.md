@@ -35,15 +35,12 @@ Information about the _CKAN_ API can be found [here](http://docs.ckan.org/en/lat
 	SearchResultMeta listOfFoundPackagesResult = restletResource.get();
 
 
-
-
 ## Credits
 
 * [Open Data - Linz](http://data.linz.gv.at/)
+* [IKT Linz GmbH](http://www.linz.at/politik_verwaltung/44530.asp)
 * with some help of [solvistas GmbH](www.solvistas.at)
 * thanks to [Open Knowledge Foundation](http://okfn.org/) for developing [CKAN](http://ckan.org/) 
-
-
 
 
 ## License
