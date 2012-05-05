@@ -7,7 +7,7 @@ This code has its origin in the [Open Data - Linz](http://data.linz.gv.at/) proj
 It is a _Java interface_ using [Restlet](http://www.restlet.org/) to access the [CKAN](http://ckan.org/) api.  
 Information about the _CKAN_ API can be found [here](http://docs.ckan.org/en/latest/api-tutorial.html).
 
-* It enables you to retrieve _package_ and associated _resource_ information from any _CKAN_ instance.
+* It enables you to retrieve _package_ and associated _resource_ information from any _CKAN_ instance
 * _JSP taglibs_  to render that information
 
 
@@ -15,17 +15,26 @@ Information about the _CKAN_ API can be found [here](http://docs.ckan.org/en/lat
 
 ### Retrieving package information
 
-``` java
 
-String packageName = "package_name";
-String uri = UriHelper.concatUris(baseUri, PackageMetaRestletResource.PACKAGE_URI + packageName);
+    String packageName = "package_name";
+    String uri = UriHelper.concatUris(baseUri, PackageMetaRestletResource.PACKAGE_URI + packageName);
 
-RestletResourceFactory factory = new RestletResourceFactory();
-		PackageMetaRestletResource restletResource = factory
+    RestletResourceFactory factory = new RestletResourceFactory();   
+	    	PackageMetaRestletResource restletResource = factory
 				.createPackageMetaResource(uri);
 
-		PackageMeta result = restletResource.get();
-```
+	PackageMeta result = restletResource.get();
+
+### Searching for packages
+
+    String searchUri = SearchResultMetaRestletResource.SEARCH_URI + queryString;
+
+    SearchResultMetaRestletResource restletResource = factory
+					.createSearchResultMetaResource(searchUri);
+
+	SearchResultMeta listOfFoundPackagesResult = restletResource.get();
+
+
 
 
 ## Credits
