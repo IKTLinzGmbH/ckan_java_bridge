@@ -15,24 +15,29 @@ Information about the _CKAN_ API can be found [here](http://docs.ckan.org/en/lat
 
 ### Retrieving package information
 
-    String packageName = ...;
-    String uri = UriHelper.concatUris(baseUri, PackageMetaRestletResource.PACKAGE_URI + packageName);
+``` java
+String packageName = ...;
+String uri = UriHelper.concatUris(baseUri, PackageMetaRestletResource.PACKAGE_URI + packageName);
 
-    RestletResourceFactory factory = new RestletResourceFactory();   
-	    	PackageMetaRestletResource restletResource = factory
-				.createPackageMetaResource(uri);
+RestletResourceFactory factory = new RestletResourceFactory();   
+	    PackageMetaRestletResource restletResource = factory
+			.createPackageMetaResource(uri);
 
-	PackageMeta result = restletResource.get();
+PackageMeta result = restletResource.get();
+```
+
 
 ### Searching for packages
 
-    String queryString = ...;
-    String searchUri = SearchResultMetaRestletResource.SEARCH_URI + queryString;
+``` java
+String queryString = ...;
+String searchUri = SearchResultMetaRestletResource.SEARCH_URI + queryString;
 
-    SearchResultMetaRestletResource restletResource = factory
-					.createSearchResultMetaResource(searchUri);
+SearchResultMetaRestletResource restletResource = factory
+				.createSearchResultMetaResource(searchUri);
 
-	SearchResultMeta listOfFoundPackagesResult = restletResource.get();
+SearchResultMeta listOfFoundPackagesResult = restletResource.get();
+```
 
 
 ## Credits
