@@ -56,4 +56,15 @@
 			<url>http://maven.restlet.org</url>
 		</repository>
 	</repositories>
+	<url>https://github.com/IKTLinzGmbH/ckan_java_bridge</url>
+	<description>Java API to access the CKAN REST interface
+http://ckan.org/</description>
+	<organization>
+		<name>IKT Linz GmbH</name>
+		<url>http://www.linz.at/politik_verwaltung/44530.asp</url>
+	</organization>
+	<scm>
+		<url>scm:git:git@github.com:IKTLinzGmbH/ckan_java_bridge.git</url>
+		<connection>scm:git:git@github.com:IKTLinzGmbH/ckan_java_bridge.git</connection>
+	</scm>
 </project>
