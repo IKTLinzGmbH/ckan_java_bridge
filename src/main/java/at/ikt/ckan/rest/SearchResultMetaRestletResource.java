@@ -7,6 +7,20 @@ import at.ikt.ckan.entities.SearchResultMeta;
 /**
  * A RESTLET  Resource to handle {@link SearchResultMeta}
  * 
+ * It is used to access the results of a CKAN query as {@link SearchResultMeta}. 
+ * 
+ * Usage:
+ * ------
+ * 
+ * String queryString = ...;
+ * String searchUri = SearchResultMetaRestletResource.SEARCH_URI + queryString;
+ * 
+ * SearchResultMetaRestletResource restletResource = factory
+ * 				.createSearchResultMetaResource(searchUri);
+ * 
+ * SearchResultMeta listOfFoundPackagesResult = restletResource.get();
+ * 
+ * @see RestletResourceFactory
  * @author Markus Merzinger
  *
  */

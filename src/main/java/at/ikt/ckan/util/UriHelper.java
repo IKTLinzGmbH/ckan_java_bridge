@@ -15,8 +15,10 @@ public class UriHelper {
 	 * if the given uri is absolute then this will be returned. if not, it will
 	 * concatenated with the given baseUri
 	 * 
-	 * @param baseUri might be a given prefix uri. used if uri is relative
-	 * @param uri an uri that might be absolute or relative
+	 * @param baseUri
+	 *            might be a given prefix uri. used if uri is relative
+	 * @param uri
+	 *            an uri that might be absolute or relative
 	 * 
 	 * @return a concatenated absolute URI
 	 */
@@ -28,6 +30,10 @@ public class UriHelper {
 		}
 	}
 
+	/**
+	 * @param uri
+	 * @return true if the given uri follows the regex pattern ".*://.*"
+	 */
 	public static boolean isAbsoluteUri(String uri) {
 		return ABSOLUTE_URI_PATTERN.matcher(uri).matches();
 	}

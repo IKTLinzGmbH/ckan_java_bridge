@@ -7,10 +7,13 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 /**
  * Entity object that holds information for a CKAN package resource.
  * 
+ * The results are holding the names of the resources that apply to the search query.
+ * 
  * Normally accessed vie REST using '.../api/search/package?q={query}'
  * 
  * A Json Wrapper
  * 
+ * @see PackageMeta
  * @author Markus Merzinger
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
