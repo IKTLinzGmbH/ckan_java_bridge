@@ -19,6 +19,15 @@ import at.ikt.ckan.rest.RestletResourceFactory;
 import at.ikt.ckan.rest.SearchResultMetaRestletResource;
 import at.ikt.ckan.util.UriHelper;
 
+/**
+ * Is used to run a query against a CKAN instance.
+ * 
+ * <ckan:search var="results" baseUri="http://thedatahub.org/api" queryString="population" />
+ * ... will store the result in variable "results" as List<PackageMeta>
+ * 
+ * @see PackageMeta
+ * @author maerzbow
+ */
 public class SearchMetaTag extends TagSupport {
 	private static final String EVICT_CACHE_URI_PARAM_NAME = "evict_cache";
 
@@ -41,12 +50,9 @@ public class SearchMetaTag extends TagSupport {
 
 		Logger logger = Context.getCurrentLogger();
 
-		logger.log(Level.FINEST, " ---- " + this.getClass().getName()
-				+ ".doStartTag() ----- ");
 
 		String fullSearchUri = buildSearchUriToUse();
 
-		logger.log(Level.FINEST, "baseUri: " + baseUri);
 		logger.log(Level.FINEST, "fullSearchUri: " + fullSearchUri);
 
 		List<PackageMeta> packageMetaList = null;

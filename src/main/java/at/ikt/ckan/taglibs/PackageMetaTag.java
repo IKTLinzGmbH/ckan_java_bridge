@@ -8,6 +8,15 @@ import at.ikt.ckan.rest.PackageMetaRestletResource;
 import at.ikt.ckan.rest.RestletResourceFactory;
 import at.ikt.ckan.util.UriHelper;
 
+/**
+ * Is used to retrieve the information of one CKAN package.
+ * 
+ * <ckan:search var="result" baseUri="http://thedatahub.org/api" packageName="1996populationecumenecensusdatacanada" />
+ * ... will store the result in variable "results" as {@link PackageMeta}
+ * 
+ * @see PackageMeta
+ * @author maerzbow
+ */
 public class PackageMetaTag extends TagSupport {
 	private static final long serialVersionUID = 1L;
 	
