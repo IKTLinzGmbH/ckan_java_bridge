@@ -44,7 +44,7 @@ SearchResultMeta listOfFoundPackagesResult = restletResource.get();
 
 * [Open Data - Linz](http://data.linz.gv.at/)
 * [IKT Linz GmbH](http://www.linz.at/politik_verwaltung/44530.asp)
-* with some help of [solvistas GmbH](www.solvistas.at)
+* with some help of [solvistas GmbH](http://www.solvistas.at)
 * thanks to [Open Knowledge Foundation](http://okfn.org/) for developing [CKAN](http://ckan.org/) 
 
 
